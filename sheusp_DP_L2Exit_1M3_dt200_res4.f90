@@ -282,7 +282,7 @@ atau=200.*DT_23 ! RHW4
 mpfl=999999
 elseif(IRHW==3) then
 NT =  6480 ! 6376 !int(6376*(200.0/240.0)) !12960  
-NPRINT = 6490!216  !797 !797 !int(797*(200.0/240.0)) !864 !DATA NT,NPRINT/12096,864/
+NPRINT = 216  !797 !797 !int(797*(200.0/240.0)) !864 !DATA NT,NPRINT/12096,864/
 !NT = 6376 !int(6376*(200.0/240.0)) !12960  
 !NPRINT = 200 !797 !797 !797 !int(797*(200.0/240.0)) !864
 DT_23=200.0d0
@@ -3065,6 +3065,15 @@ TIME=KT*DT/3600.0
 !GC2_23= DT_23/(ACOS(-1.0d0)/FLOAT(M))                                        ! DT/DY
 !GC2 = GC2_23
 
+write(*,*) 'Courant Number'
+DO J=1,M
+   COUR2=0.0d0
+  DO I=2,N
+    COUR2=max(COUR2, GC1*ABS(U(I,J)/HX(I,J))                          &
+      &                  +GC2*ABS(V(I,J)/HY(I,J)) )
+  end do
+    write(*,*)j,COUR2
+end do
 
 DO J=1,M
   DO I=2,N

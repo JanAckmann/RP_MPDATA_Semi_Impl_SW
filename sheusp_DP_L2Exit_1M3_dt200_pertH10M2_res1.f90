@@ -217,7 +217,7 @@ do ID_PREC=7,7,-5
    write(Dp_depth_str,*) DP_Depth
 
   !ID_PREC=0
-   EXP_NAME= 'data/sheusp_DP_L2Exit_1M3_dt800_pertH10M2_res1'
+   EXP_NAME= 'data/sheusp_DP_L2Exit_1M3_dt800_pertH10M2_UPTH0_res1'
   ! EXP_NAME= 'data_ADI_Precon_init23'
 
 
@@ -499,6 +499,13 @@ elseif (IRHW.EQ.3)then
 else
   P0_HP(:,:)=0.0
 endif
+!call random_seed()
+!  DO J=1,M
+!    DO I=2,N-1
+!      CALL RANDOM_NUMBER(pert)
+!      P0_HP(I,J)=P0_HP(I,J)+(pert-0.5d0)*G*1.0d0
+!    end do
+!  end do
     call write_residual(P0_HP,0.0d0, 0, 0.0d0, codesignQ, codesignD, IRHW, X, Y,&
                      & N, M, num_of_bits, 33 ,EXP_NAME)
 

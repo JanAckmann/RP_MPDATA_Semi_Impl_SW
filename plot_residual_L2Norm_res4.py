@@ -19,7 +19,8 @@ from matplotlib.ticker import MaxNLocator
 #path='../data/sheusp_IMPR_SP_RPGCR_Prec_DP16_L2Exit_1M3_dt200_res4/'
 #path='../data/sheusp_IMPR_SP_RPPreAll_RPLap_FullSPr0_DP0_L2Exit_1M3_dt200_res4/'
 #path='../data/sheusp_IMPR_SP_FRPPreAll_FRPLap_SPr0_DP2_L2Exit_1M3_dt200_res4/' # no single precision left in precon
-path='../data/sheusp_IMPR_SP_FRPPreAll_FRPLap_SPr0V2_RPxAx_DP3_L2Exit_1M3_dt200_res4/' # + reduced precisision in conjugacy 
+#path='../data/sheusp_IMPR_SP_FRPPreAll_FRPLap_SPr0V2_RPxAx_DP3_L2Exit_1M3_dt200_res4/' # + reduced precisision in conjugacy 
+path= '../data/sheusp_IMPR_SP_RPMPDATA_FRPPreAll_FRPLap_SPr0V2_RPxAx_DP128_L2Exit_1M3_dt200_res4/'
 #path='../data/sheusp_IMPR_SP_FRPPreAll_FRPLap_SPr0V2_DP4_L2Exit_1M3_dt200_res4/' # + reduced precisision in conjugacy 
 #path='../data/sheusp_IMPR_SP_plusLat_L2Exit_1M3_dt200_res4/'
 Precon='23'
